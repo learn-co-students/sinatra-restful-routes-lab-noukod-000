@@ -1,0 +1,20 @@
+<h1>The List Of Recipes:</h1>
+
+<table>
+  <thead>
+    <th>Name</th>
+    <th>ingredients</th>
+    <th>cook_time</th>
+    <th>Action</th>
+  </thead>
+  <tbody>
+    <% @recipes.each do |r| %>
+      <tr>
+        <td><%= r.name %></td></br>
+        <td><%= r.ingredients %></td></br>
+        <td><%= r.cook_time %></td></br>
+        <td><a href="/recipes/<%= r.id %>"</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
