@@ -1,0 +1,7 @@
+<h1>List of My Mom Recipes</h1>
+<% @recipes.each do |r| %>
+    <p><h2><%= r.name %></h2>
+      <p><%= r.ingredients %><br>
+        <%= r.cook_time %></p>
+    <a href="/recipes/<%= r.id %>"><input type="button" name="<%= r.id %>" value="Show"></a></p>
+<% end %>
