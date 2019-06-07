@@ -1,0 +1,8 @@
+<div class="container">
+  <h1>Welcome</h1>
+  <h3>Here's the list of all your recipes</h3>
+    <%@recipes.each do |el|%>
+    <% link = "/recipes/#{el.id}"%>
+    <p><a href="<%=link%>"><%=el.name%></a></p>
+    <% end %>
+</div>
