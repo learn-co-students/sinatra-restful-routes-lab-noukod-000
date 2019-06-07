@@ -1,9 +1,10 @@
-class ApplicationController < Sinatra::Base
+leaclass ApplicationController < Sinatra::Base
   require 'pry'
   configure do
     set :public_folder, 'public'
     set :views, 'app/views'
   end
+<<<<<<< HEAD
 
   # Display all recipes
   get '/recipes' do
@@ -106,3 +107,16 @@ end
 #   #   redirect to '/recipes/#{@recipes.id}'
 #   # end
 # end
+=======
+  
+  get '/' do
+    @recipes = Recipe.all
+    erb :index
+  end
+  
+  get '/recipes' do 
+    @recipes = Recipe.all
+    redirect '/'
+  end 
+end
+>>>>>>> 52c415a86f46d0700099550fd114a94e5e173d7d
