@@ -1,0 +1,11 @@
+<h1>Welcome</h1>
+
+<h2>List of recipe name</h2>
+
+<ol>
+  <% @recette.each do |instance| %>
+    <li><a href="/recipes/<%=instance.id%>"><%=instance.name%></a></li>
+  <% end %>
+</ol>
+
+<p>Create a <a href="/recipes/new">new</a></p>
