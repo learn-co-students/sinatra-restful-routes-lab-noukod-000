@@ -1,0 +1,11 @@
+<h1>Please Delete your recipe</h1>
+<form action='/recipes/<%=@recette.id%>/delete' method="post">
+<input id="hidden" type="hidden" name="_method" value="delete">
+    <label for="name">Name:</label>
+    <input type="text" name="name" value="<%=@recette.name%>">
+    <label for="ingredients">Ingredients:</label>
+    <textarea name="ingredients" rows="10" cols="80"><%=@recette.ingredients%></textarea>
+    <label for="cook_time">Cook Time:</label>
+    <input type="text" name="cook_time" value="<%=@recette.cook_time%>">
+    <input type="submit" value="Delete">
+</form>
